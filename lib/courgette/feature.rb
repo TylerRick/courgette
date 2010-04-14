@@ -21,10 +21,22 @@ module Courgette
     end
 
     def to_html
-      step_mother = Object.new
-      step_mother.extend(Cucumber::StepMother)
-      visitor = Cucumber::Formatter::Html.new(step_mother, nil, {})
-      visitor.visit_feature(ast)
+      step_mother = Cucumber::StepMother.new
+
+      out = StringIO.new
+      formatter = Cucumber::Formatter::Html.new(step_mother, out, {})
+      step_mother.visitor = formatter
+
+      features = Cucumber::Ast::Features.new
+
+      feature = feature_file.parse(step_mother, {})
+      features.add_feature(feature)
+      
+      options = {}
+      tree_walker = Cucumber::Ast::TreeWalker.new(step_mother, [formatter], options, STDOUT)
+      tree_walker.visit_features(features)
+
+      out.string      
     end
     
     def ==(other)
@@ -48,6 +60,7 @@ module Courgette
     def ast
       @ast ||= feature_file.parse
     end
+
 
   end
 
