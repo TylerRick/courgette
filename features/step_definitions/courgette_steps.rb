@@ -1,5 +1,5 @@
 Then /^I should see the header "([^\"]*)"$/ do |header|
-  response.should have_tag('h1,h2', :text => /#{header}/)
+  page.should have_xpath('//*/h2', :text => /#{header}/)
 end
 
 Then /^I should see a table where a row contains the cells? "([^\"]*)"$/ do |cells|
