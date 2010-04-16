@@ -9,7 +9,7 @@ your browser. Install and browse to:
 
     /features
 
-Voilá, pretty list of features. Great for communicating with the customer.
+Voilà, pretty list of features. Great for communicating with the customer.
 
 == FEATURES/PROBLEMS:
 
