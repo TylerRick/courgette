@@ -11,6 +11,14 @@ your browser. Install and browse to:
 
 Voilà, pretty list of features. Great for communicating with the customer.
 
+== TODO:
+
+fork guide : http://help.github.com/forking/
+Use http://github.com/7digital/7features code?
+
+or a syntax higlighter among http://www.webresourcesdepot.com/11-syntax-highlighters-to-beautify-code-presentation/
+http://ultraviolet.rubyforge.org/index.xhtml seems to be the best?
+
 == FEATURES/PROBLEMS:
 
 * FIX (list of features or problems)
