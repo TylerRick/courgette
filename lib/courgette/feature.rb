@@ -22,7 +22,7 @@ module Courgette
       relative_path.sub(/^\//, '').sub(/\.feature$/, '').parameterize.dasherize.to_s
     end
 
-    def to_html
+    def source
   
     end
     

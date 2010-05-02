@@ -11,13 +11,24 @@ your browser. Install and browse to:
 
 Voilà, pretty list of features. Great for communicating with the customer.
 
-== TODO:
+== mini ROAD MAP
 
-fork guide : http://help.github.com/forking/
-Use http://github.com/7digital/7features code?
+* output features source
+* output step definitions source (*_steps.rb) using http://github.com/moro/tsuridana & syntax gem
+* add syntax highlighting using http://github.com/aslakhellesoy/gherkin-pygments-lexer
+* search feature
+* integrate step_master http://github.com/clearwavebuild/step_master  
 
-or a syntax higlighter among http://www.webresourcesdepot.com/11-syntax-highlighters-to-beautify-code-presentation/
+== Documentation & other projects
+
+* fork guide : http://help.github.com/forking/
+* http://github.com/eladmeidar/CannedCukes
+* Use http://github.com/7digital/7features code?
+
+* or a syntax higlighter among http://www.webresourcesdepot.com/11-syntax-highlighters-to-beautify-code-presentation/
 http://ultraviolet.rubyforge.org/index.xhtml seems to be the best?
+
+Merge features from http://github.com/cs3b/cucumber_fe
 
 == FEATURES/PROBLEMS:
 

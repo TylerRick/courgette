@@ -4,5 +4,6 @@ Feature: List steps
   I want to publish a list of steps for my application
 
   Scenario: list steps in the fixture application
-    Given I enter the address of the steps page
+    Given I am on the steps page
      Then I should see "Then /^show me the page$"
+     And I should see 
