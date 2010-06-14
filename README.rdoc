@@ -13,7 +13,9 @@ Voilà, pretty list of features. Great for communicating with the customer.
 
 == mini ROAD MAP
 
-* output features source
+* browse features & scenarios
+* output features with ruby source for step definitions, so developpers can read a scenario and understand quickly
+* what it does without having to open multiple files
 * output step definitions source (*_steps.rb) using http://github.com/moro/tsuridana & syntax gem
 * add syntax highlighting using http://github.com/aslakhellesoy/gherkin-pygments-lexer
 * search feature

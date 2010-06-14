@@ -9,13 +9,7 @@ module Courgette
     end
 
     def name
-      File.read(@path).to_s[/^Feature: (.+)$/, 1] || name_lines.first.split(':', 2).second.strip
-    end
-
-    def feature_elements_size
-      2
-      # FIXME !!!! broken by cucumber upgrade
-      # ast.instance_variable_get('@feature_elements').size
+      self.source[/^Feature: (.+)$/, 1] || name_lines.first.split(':', 2).second.strip
     end
 
     def to_param
@@ -23,7 +17,7 @@ module Courgette
     end
 
     def source
-  
+      File.read(@path).to_s
     end
     
     def ==(other)
@@ -35,19 +29,6 @@ module Courgette
     def relative_path
       File.expand_path(path).sub(Courgette.feature_root, '')
     end
-
-    def name_lines
-      ast.name.respond_to?(:lines) ? ast.name.lines.to_a : ast.name.to_a
-    end
-
-    def feature_file
-      @feature_file ||= Cucumber::FeatureFile.new(path)
-    end
-
-    def ast
-      @ast ||= feature_file.parse
-    end
-
 
   end
 

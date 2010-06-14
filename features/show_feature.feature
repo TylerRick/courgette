@@ -10,7 +10,7 @@ Feature: List features
 
      When I follow "User eats a Rabbit"
 
-     Then I should see the header "Feature: User eats a Rabbit"
+     Then I should see "Feature: User eats a Rabbit"
 
       And I should see "In order to get that delicious feeling"
       And I should see "As a user"

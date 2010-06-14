@@ -5,10 +5,6 @@ Feature: List features
 
   Scenario: list features in the fixture application
     Given I enter the address of the feature page
-     # And show me the page
-     # Then I should see the feature title in the page section
-     Then I should see "User eats a Rabbit" within "//*[@id='page']"
-     * I should see "Visitor can transform"
-     * I should not see "$/ do"
+     Then I should see "Scenario: eat a really cute rabbit"
      #And I should see some really good looking html with syntax highlighting
      # And I should not see "pending"

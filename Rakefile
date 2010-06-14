@@ -16,7 +16,6 @@ $hoe = Hoe.spec 'courgette' do
   self.rubyforge_name       = self.name # TODO this is default value
   self.version = Courgette::VERSION
   self.extra_deps         = [['cucumber','>= 0.3.90']]
-
 end
 
 require 'newgem/tasks'
