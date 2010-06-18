@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>Features</title>
-    
+
     <style type="text/css" media="screen">
       body {
         background: #f0f0f0;
@@ -13,25 +13,25 @@
         font-size: 13px;
         line-height: 1.5em;
       }
-      
+
       * {
         margin: 0;
         padding: 0;
       }
-      
+
       a:link, a:visited {
         border-bottom: 1px solid #98c4d1;
         color: #359abe;
         text-decoration: none;
       }
-      
+
       a:hover {
         border-bottom: 1px solid #c63;
         color: #c63;
       }
-      
+
       #menu {
-        font-size: 12px;  
+        font-size: 12px;
         width: 259px;
         margin-right: -300px;
         float: left;
@@ -40,38 +40,38 @@
         padding: 40px 0 60px;
         border-right: 1px solid #eee;
       }
-      
+
       #menu li a {
         display: block;
         padding: 5px 20px;
         border-bottom: 1px solid #ddd;
         border-top: 1px solid #ddd;
       }
-      
+
       #menu li a.current {
         border-left: 5px solid #c63;
         padding-left: 15px;
       }
-      
+
       #footer {
         margin: 10px 50px 100px 300px;
         color: #888;
       }
-      
+
       #page {
         margin: 30px 50px 10px 300px;
         background: white;
         border-bottom: 3px solid #ccc;
         border-right: 3px solid #ddd;
         padding: 30px 50px 60px;
-        min-height: 600px;
+        /*min-height: 600px;*/
       }
-      
+
       #page h1, #page h2, #page h3 {
         font-weight: normal;
         font-size: 1em;
       }
-      
+
       #page h2 {
         background: #F4FDFF;
         font-family: "Museo700","Helvetica Neue",Arial,sans-serif;
@@ -82,35 +82,18 @@
         height: 39px;
         border-bottom: 1px solid #E3EDEF;
       }
-      
-      .narrative {
-        color: #888;
-        margin: 1em 0;
-      }
-      
-      .scenario h3, .background h3 {
-        margin: 0 0 1em;
-      }
-      
-      .scenario, .background, .narrative {
-        margin: 3em 0;
-      }
-      
-      .scenario li, .background li {
-        list-style: none;
-      }
-      
-      .keyword {
-        color: #DC7D11;
-      }
-      
-      li .keyword {
-        float: left;
-        width: 55px;
-        text-align: right;
-        margin-right: 1em;
-      }
+
+
     </style>
+
+    <%= stylesheet_link_tag 'shCore', 'shThemeDefault' %>
+    <%= javascript_include_tag 'shCore', 'shCucumber'%>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['gutter'] = false;
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.defaults['wrap-lines'] = false;
+        SyntaxHighlighter.all();
+    </script>
   </head>
   
   <body>
@@ -123,7 +106,7 @@
       <%= yield %>
     </div>
     <div id="footer">
-      Powered by <%= link_to 'Courgette', 'http://github.com/jnicklas/courgette' %>,
+      Powered by <%= link_to 'Courgette', 'http://github.com/21croissants/courgette' %>,
       an open cource viewer for <%= link_to 'Cucumber', 'http://cukes.info' %> features.
     </div>
   </body>

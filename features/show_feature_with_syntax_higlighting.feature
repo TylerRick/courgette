@@ -1,10 +1,10 @@
-Feature: List features
+Feature: Show features text with some syntax hightlighting
   In order to communicate the function of the application to the customer
   As a developer using cucumber
   I want to publish a feature
 
   Scenario: list features in the fixture application
-    Given I enter the address of the feature page
+    Given I enter the address of the features page
 
      Then I should see "User eats a Rabbit"
 
@@ -20,3 +20,6 @@ Feature: List features
       And I should see "And the rabbit is really cute"
       And I should see "When I eat the rabbit"
       And I should see "Then I should feel good"
+
+  Scenario: syntax higlighting
+    # Given

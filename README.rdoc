@@ -1,27 +1,30 @@
 = courgette
 
-* http://github.com/jnicklas/courgette
+* http://github.com/21croissants/courgette
 
 == DESCRIPTION:
 
-Courgette is a Rails engine which makes your feature files viewable through
+Courgette is a Rails engine (plugin) which makes your feature files viewable through
 your browser. Install and browse to:
 
     /features
 
 Voilà, pretty list of features. Great for communicating with the customer.
 
+Current version is 0.0.4
+
 == mini ROAD MAP
 
-* browse features & scenarios
+* add scenarios for testing syntax higligting
+* not available on production
+* browse features & scenarios using treeview
 * output features with ruby source for step definitions, so developpers can read a scenario and understand quickly
-* what it does without having to open multiple files
-* output step definitions source (*_steps.rb) using http://github.com/moro/tsuridana & syntax gem
-* add syntax highlighting using http://github.com/aslakhellesoy/gherkin-pygments-lexer
+ what it does without having to open multiple files
+* compatible with Rails 3 ?
 * search feature
-* integrate step_master http://github.com/clearwavebuild/step_master  
+* output step definitions source (*_steps.rb) using http://github.com/moro/tsuridana & syntax gem => Is there value?
 
-== Documentation & other projects
+== Documentation & other projects to take some inspiration
 
 * fork guide : http://help.github.com/forking/
 * http://github.com/eladmeidar/CannedCukes
@@ -36,9 +39,6 @@ Merge features from http://github.com/cs3b/cucumber_fe
 
 * FIX (list of features or problems)
 
-== SYNOPSIS:
-
-  FIX (code sample of usage)
 
 == REQUIREMENTS:
 
@@ -48,11 +48,15 @@ Merge features from http://github.com/cs3b/cucumber_fe
 
 * FIX (sudo gem install, anything else)
 
+== CREDITS :
+
+I forked Jonas Nicklas original courgette and migrated the cucumber features to capybara (another awesome project of Jonas).
+
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2009 Jonas Nicklas
+Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

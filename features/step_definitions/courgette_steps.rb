@@ -20,6 +20,6 @@ Then /^I should see a table with the headers "([^\"]*)"$/ do |headers|
   end
 end
 
-Given /^I enter the address of the feature page$/ do
+Given /^I enter the address of the features page$/ do
   visit '/features'
 end
