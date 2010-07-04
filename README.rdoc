@@ -20,10 +20,12 @@ Current version is 0.0.4
 * browse features & scenarios using treeview
 * output features with ruby source for step definitions, so developpers can read a scenario and understand quickly
  what it does without having to open multiple files
-* compatible with Rails 3 ?
+* compatible with Rails 3, http://weblog.rubyonrails.org/2010/2/9/plugin-authors-toward-a-better-future 
+* compatible with various versions of rails : http://github.com/ianwhite/garlic
 * search feature
 * output step definitions source (*_steps.rb) using http://github.com/moro/tsuridana & syntax gem => Is there value?
-
+* add some ruby code browser a la http://github.com/dolzenko/reflexive
+* documentation site to show off, mongoid style ;-) http://github.com/mongoid/mongoid-site
 == Documentation & other projects to take some inspiration
 
 * fork guide : http://help.github.com/forking/
