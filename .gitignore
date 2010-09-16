@@ -1,4 +1,2 @@
-pkg
-.DS_Store
-.idea
 capybara*
+.rvmrc

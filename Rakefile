@@ -1,26 +1,17 @@
-require 'rubygems'
-gem 'hoe', '>= 2.1.0'
-require 'hoe'
-require 'fileutils'
-require './lib/courgette'
+require 'rake'
 
-Hoe.plugin :newgem
-# Hoe.plugin :website
-Hoe.plugin :cucumberfeatures
+require 'spec/rake/spectask'
+require 'spec'
 
-# Generate all the Rake tasks
-# Run 'rake -T' to see list of generated tasks (from gem root directory)
-$hoe = Hoe.spec 'courgette' do
-  self.developer 'Jonas Nicklas', 'jonas.nicklas@gmail.com'
-  self.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required
-  self.rubyforge_name       = self.name # TODO this is default value
-  self.version = Courgette::VERSION
-  self.extra_deps         = [['cucumber','>= 0.3.90']]
+require 'cucumber'
+require 'cucumber/rake/task'
+
+Spec::Rake::SpecTask.new('spec') do |t|
+  t.spec_files = FileList['spec/**/*.rb']
 end
 
-require 'newgem/tasks'
-Dir['tasks/**/*.rake'].each { |t| load t }
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "features --format progress"
+end
 
-# TODO - want other tests/tasks run by default? Add them to the list
-# remove_task :default
 task :default => [:spec, :features]

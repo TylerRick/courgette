@@ -44,7 +44,7 @@ Merge features from http://github.com/cs3b/cucumber_fe
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* gem install bundler
 
 == INSTALL:
 
