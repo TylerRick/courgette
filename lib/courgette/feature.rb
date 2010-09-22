@@ -13,7 +13,7 @@ module Courgette
     end
 
     def to_param
-      relative_path.sub(/^\//, '').sub(/\.feature$/, '').parameterize.dasherize.to_s
+      relative_path.sub(/^\//, '').sub(/\.feature$/, '')
     end
 
     def source

@@ -1,15 +1,24 @@
 class FeaturesController < ApplicationController
   unloadable
-  
+
   layout "courgette"
-  
+
   def index
     @feature = Courgette.first
-    render "show"
+    render "source"
   end
-  
-  def show
-    @feature = Courgette.find(params[:id])
+
+  def treeview
+    @folder_path = params[:dir]
+
+    @directories = Courgette.feature_folders(@folder_path)
+    @files = Courgette.feature_filenames(@folder_path)
+    render :layout => false
   end
-  
+
+  def source
+    @feature = Courgette.find(params[:path])
+    render "source", :layout => false
+  end
+
 end

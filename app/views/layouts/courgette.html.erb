@@ -1,113 +1,64 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>Features</title>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title>Features</title>
 
-    <style type="text/css" media="screen">
-      body {
-        background: #f0f0f0;
-        font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;
-        font-size: 13px;
-        line-height: 1.5em;
+  <!-- treeview -->
+  <style type="text/css">
+      .features_treeview {
+          background-color: #FFFFFF;
+          border-color: #BBBBBB #FFFFFF #FFFFFF #BBBBBB;
+          border-style: solid;
+          border-width: 1px;
+          height: 400px;
+          overflow: scroll;
+          padding: 5px;
+          width: 250px;
       }
+  </style>
 
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      a:link, a:visited {
-        border-bottom: 1px solid #98c4d1;
-        color: #359abe;
-        text-decoration: none;
-      }
-
-      a:hover {
-        border-bottom: 1px solid #c63;
-        color: #c63;
-      }
-
-      #menu {
-        font-size: 12px;
-        width: 259px;
-        margin-right: -300px;
-        float: left;
-        margin: 100px 0 10px 40px;
-        list-style: none;
-        padding: 40px 0 60px;
-        border-right: 1px solid #eee;
-      }
-
-      #menu li a {
-        display: block;
-        padding: 5px 20px;
-        border-bottom: 1px solid #ddd;
-        border-top: 1px solid #ddd;
-      }
-
-      #menu li a.current {
-        border-left: 5px solid #c63;
-        padding-left: 15px;
-      }
-
-      #footer {
-        margin: 10px 50px 100px 300px;
-        color: #888;
-      }
-
-      #page {
-        margin: 30px 50px 10px 300px;
-        background: white;
-        border-bottom: 3px solid #ccc;
-        border-right: 3px solid #ddd;
-        padding: 30px 50px 60px;
-        /*min-height: 600px;*/
-      }
-
-      #page h1, #page h2, #page h3 {
-        font-weight: normal;
-        font-size: 1em;
-      }
-
-      #page h2 {
-        background: #F4FDFF;
-        font-family: "Museo700","Helvetica Neue",Arial,sans-serif;
-        font-size: 26px;
-        color: #4B96AE;
-        margin: -30px -50px 40px;
-        padding: 20px 50px 0;
-        height: 39px;
-        border-bottom: 1px solid #E3EDEF;
-      }
+  <%= stylesheet_link_tag '/courgette/stylesheets/courgette', '/courgette/stylesheets/shCore', '/courgette/stylesheets/shThemeDefault', '/courgette/stylesheets/jqueryFileTree' %>
 
 
-    </style>
+  <%= javascript_include_tag '/courgette/javascripts/shCore', '/courgette/javascripts/shCucumber', '/courgette/javascripts/jquery', '/courgette/javascripts/jqueryFileTree', '/courgette/javascripts/jquery_easing' %>
 
-    <%= stylesheet_link_tag 'shCore', 'shThemeDefault' %>
-    <%= javascript_include_tag 'shCore', 'shCucumber'%>
-    <script type="text/javascript">
-        SyntaxHighlighter.defaults['gutter'] = false;
-        SyntaxHighlighter.defaults['toolbar'] = false;
-        SyntaxHighlighter.defaults['wrap-lines'] = false;
-        SyntaxHighlighter.all();
-    </script>
-  </head>
-  
-  <body>
-    <ul id="menu">
-      <% Courgette.features.each do |feature| %>
-        <li><%= link_to truncate(feature.name, :length => 35), feature_path(feature), :title => feature.name, :class => (feature == @feature) ? 'current' : '' %></li>
-      <% end %>
-    </ul>
-    <div id="page">
-      <%= yield %>
-    </div>
-    <div id="footer">
-      Powered by <%= link_to 'Courgette', 'http://github.com/21croissants/courgette' %>,
-      an open cource viewer for <%= link_to 'Cucumber', 'http://cukes.info' %> features.
-    </div>
-  </body>
+  <script type="text/javascript">
+      SyntaxHighlighter.defaults['gutter'] = false;
+      SyntaxHighlighter.defaults['toolbar'] = false;
+      SyntaxHighlighter.defaults['wrap-lines'] = false;
+      SyntaxHighlighter.all();
+  </script>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('#fileTree').fileTree({ root: '', script: '/features/treeview' }, function(feature_basename) {
+              ajaxRequestUrl = "features/source?path=" + feature_basename;
+              $.ajax({
+                  url: ajaxRequestUrl,
+                  type: "get",
+                  success: function(html) {
+                      $("#feature-source").replaceWith(html);
+                      SyntaxHighlighter.highlight();
+                  }
+              });
+          });
+      });
+  </script>
+</head>
+
+<body>
+<div id="menu">
+  <div id="fileTree" class="features_treeview"></div>
+</div>
+<div id="page">
+  <%= yield %>
+</div>
+<div id="footer">
+  Powered by <%= link_to 'Courgette', 'http://github.com/21croissants/courgette' %>,
+  an open cource viewer for <%= link_to 'Cucumber', 'http://cukes.info' %> features.
+</div>
+</body>
 </html>
