@@ -16,6 +16,9 @@ http://img.skitch.com/20100922-gj3f5k9cf2qek67yjapcs8nrbr.png
 == INSTALL:
 
 * script/plugin install git@github.com:21croissants/courgette.git
+
+
+
 * Setup Courgette assets by creating a symlink to courgette/public/courgette inside your application's public directory :
 
 $ cd public
@@ -25,19 +28,16 @@ And browse to:
 
     /features
 
-Voilà, pretty list of features. Great for communicating with the customer.
+Voilà, pretty list of features available in all env except "production". Great for communicating with the customer.
 
 == TODO
 
 For the 1st official release:
 
-* add scenario not available on production env
-
 * clean README
 * set up vote for new features to be developped using github issues system)
 * comment courgette to http://pivotallabs.com/users/spierson/blog/articles/1363-standup-8-17-2010-rubymine-shortcuts-client-visible-cucumber-results
 * send message to cuke mailing list, jo wilk, Matt wynne, tweet it!
-
 
 == mini ROAD MAP
 
