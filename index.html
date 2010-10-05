@@ -95,7 +95,9 @@
         <span class="small">by <a href="http://github.com/21croissants">21croissants</a></span></h1>
 
     <div class="description">
-        Courgette is a Rails engine (plugin) for Rails 2.x applications which makes your features files viewable through
+        Courgette is a Rails engine (plugin) for Rails 2.x applications which makes your <a href="http://cukes.info/"
+                                                                                            target="_blank">cucumber</a>
+        features files viewable through
         your browser
     </div>
 
@@ -103,97 +105,109 @@
 
     <p>
 
-    </p><br/>
-
-    <h2>TODO</h2>
-    <br/>
-    fix problem with ‘rake features’ task broken because bundle exec cant’t find envjs :-(<br/>
-    <br/>
-    compatible with various versions of rails : github.com/ianwhite/garlic<br/>
-    output features with ruby source for step definitions, so developpers can read a scenario and understand
-    quickly<br/>
-    &nbsp;what it does without having to open multiple files<br/>
-    compatible with Rails 3, check out weblog.rubyonrails.org/2010/2/9/plugin-authors-toward-a-better-future &amp;
-    \<br/>
-    &nbsp;http://adventuresincoding.com/2010/08/34-ruby-on-rails-3-resources-to-get-you-started/
-    http://www.themodestrubyist.com/2010/03/01/rails-3-plugins---part-1---the-big-picture<br/>
-    &nbsp;search feature, using http://rubygems.org/gems/grepper ?<br/>
-    output step definitions source (*_steps.rb) using github.com/moro/tsuridana &amp; syntax gem =&gt; Is there
-    value?<br/>
-    or stepdefs cuke formatter (Prints All step definitions with their
-    locations. Same as the usage formatter, except that steps are not
-    printed.)<br/>
-    <br/>
-    syntax highligting for i18n features<br/>
-    Documentation &amp; other projects to take some inspiration<br/>
-    <br/>
-    documentation site to show off, mongoid style ;-) github.com/mongoid/mongoid-site<br/>
-    fork guide : help.github.com/forking/<br/>
-    Use github.com/7digital/7features code?<br/>
-    or a syntax higlighter among www.webresourcesdepot.com/11-syntax-highlighters-to-beautify-code-presentation/<br/>
-    ultraviolet.rubyforge.org/index.xhtml seems to be the best?<br/>
-    <br/>
-    Merge features from github.com/cs3b/cucumber_fe<br/>
-
-
-    <h2>Dependencies</h2>
-
-    <p>There are no dependencies to install in order to use the plugin. <br/>
     </p>
-
-    <p>If courgette assets are missing - it should not happen as install script takes care of it.
-        However, if something went wrong, you could do a manual setup by creating a symlink to
-        courgette/public/courgette inside your application's public directory :
-
-        $ cd public
-        $ ln -s ../vendor/plugins/courgette/public/courgette courgette
-
-        To contribute:
-        * fork the project
-        * bundle install</p>
-
 
     <h2>Install</h2>
 
+
     <p>
     </p>
+
+
     <pre>script/plugin install git@github.com:21croissants/courgette.git</pre>
 
-    And browse to:<br/><br/>
 
-    /features
+    And browse to:<br/>
+    <br/>
+    <a href="http://localhost:3000/features">
 
-    Voilà, pretty list of features available in all env except "production". Great for communicating with the
-    customer.
+        /features</a>
 
-    <h2>Contribute</h2>
+    Voilà, pretty list of features available in all env except for "production". Great for communicating with the
+    customer.<h2>Please vote for the next features</h2><a
+        href="http://github.com/21croissants/courgette/issues#sort=votes" target="_blank">http://github.com/21croissants/courgette/issues#sort=votes</a><br/>
 
-    <p>You can clone the project with <a href="http://git-scm.com">Git</a>
-        by running:
-    </p>
-    <pre>git clone git://github.com/21croissants/courgette</pre>
     <br/>
 
+    <h2>Similar projects</h2>
+
+
+    <ul>
+
+        <li><a href="http://cs3b.github.com/cucumber_fm/index.html">github.com/cs3b/cucumber_fm
+        </a> Very active, very nice dashboard with integrated editor
+        </li>
+        <li>http://github.com/christophermoura/rcumber not updated since nov 2008</li>
+        <li><a href="http://github.com/7digital/7features" target="_blank">github.com/7digital/7features</a> a simple
+            CSS formatter to ouput features in a more business readable way <br/>
+        </li>
+
+    </ul>
+    <h2>Dependencies</h2>
+
+
+    <p>There are no dependencies to install in order to use the plugin.&nbsp;</p>
+
+    <p>This plugin has been tested with ruby 1.8.7 and Rails 2.3.8</p>
+
+    <p>install.rb script takes care of adding a symlink to assets.
+        However, if something went wrong, you could do a manual setup by creating a symlink to
+        courgette/public/courgette inside your application's public directory :</p>
+
+
+    <pre>  cd public<br/>  ln -s ../vendor/plugins/courgette/public/courgette courgette</pre>
+    <h2>Contribute</h2>
+
+
+    <p>You can contribute to the project with <a href="http://git-scm.com">Git</a>:<br/>
+    </p>
+
+
+    <ul>
+        <li><a href="http://help.github.com/forking/" target="_blank">Fork</a> the project.</li>
+    </ul>
+    <pre>bundle install<br/>rake # should have no failures</pre>
+    <ul>
+        <li>Make your feature addition or bug fix (pls specify ruby &amp; rails versions)<br/>
+        </li>
+        <li>Add tests for it. This is important so I don’t break it in a future version unintentionally.</li>
+        <li>Commit, do not mess with rakefile, version, or history. (if you
+            want to have your own version, that is fine but bump version in a
+            commit by itself I can ignore when I pull)
+        </li>
+        <li>Send me a pull request. Bonus points for topic branches.</li>
+    </ul>
     <h2>Authors</h2>
 
-    <p>I forked Jonas Nicklas original courgette and migrated the cucumber features to capybara (another awesome project
+
+    <p>I forked Jonas Nicklas original courgette and migrated the cucumber features to <a
+            href="http://github.com/jnicklas/capybara" target="_blank">capybara</a> (another awesome project
         of Jonas).
         <br/>
-        <br/>21croissants (jean-michel@21croissants.com)
-        <br/>Jonas Nicklas (jonas.nicklas@gmail.com)
-        <br/>
         <br/></p>
+    <ul>
+        <li>21croissants (jean-michel@21croissants.com)
+        </li>
+        <li>Jonas Nicklas (jonas.nicklas@gmail.com)
+        </li>
+    </ul>
+
 
     <h2>Contact</h2>
 
-    <p>Jean-Michel Garnier (jean-michel@21croissants.com)</p>
+    <p><a href="http://github.com/21croissants/courgette/issues" target="_blank">Jean-Michel Garnier</a><br/>
+    </p>
 
     <h2>License</h2>
 
 
-    <p>(The MIT License)
+    <p>(The MIT License)</p>
 
-        Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier
+    <p>
+
+        Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier</p>
+
+    <p>
 
         Permission is hereby granted, free of charge, to any person obtaining
         a copy of this software and associated documentation files (the
@@ -201,10 +215,13 @@
         without limitation the rights to use, copy, modify, merge, publish,
         distribute, sublicense, and/or sell copies of the Software, and to
         permit persons to whom the Software is furnished to do so, subject to
-        the following conditions:
+        the following conditions: <br/>
+    </p>
 
-        The above copyright notice and this permission notice shall be
-        included in all copies or substantial portions of the Software.
+    <p>The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.</p>
+
+    <p>
 
         THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
         EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
