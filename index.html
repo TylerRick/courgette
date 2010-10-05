@@ -1,132 +1,214 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>21croissants/courgette @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #ffffff;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #006633;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #6688c5; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #6688c5; }
-    h3 { text-align: center; color: #6688c5; }
-    a { color: #6688c5; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>    09 53 79 23 94
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
 
 
-<body>
-  <a href="http://github.com/21croissants/courgette"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>21croissants/courgette @ GitHub</title>
+
+    
+
+    <style type="text/css">
+        body {
+            margin-top: 1.0em;
+            background-color: #ffffff;
+            font-family: "Helvetica,Arial,FreeSans";
+            color: #07331d;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 700px;
+        }
+
+        h1 {
+            font-size: 3.8em;
+            color: #2252a8;
+            margin-bottom: 3px;
+        }
+
+        h1 .small {
+            font-size: 0.4em;
+        }
+
+        h1 a {
+            text-decoration: none
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #2252a8;
+        }
+
+        h3 {
+            text-align: center;
+            color: #2252a8;
+        }
+
+        a {
+            color: #2252a8;
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .download {
+            float: right;
+        }
+
+        pre {
+            background: #000;
+            color: #fff;
+            padding: 15px;
+        }
+
+        hr {
+            border: 0;
+            width: 80%;
+            border-bottom: 1px solid #aaa
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            font-style: italic;
+        }
+    </style></head><body>
+<a href="http://github.com/21croissants/courgette"><img style="border: 0pt none ; position: absolute; top: 0pt; right: 0pt;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+<div id="container">
 
     <div class="download">
-      <a href="http://github.com/21croissants/courgette/zipball/master">
-        <img border="0" width="90" src="http://wwwedu.ge.ch/co/colombieres/Sic/Thullen/05_06/704Aexer6/image%20courgette.jpg"></a>
+        <a href="http://github.com/21croissants/courgette/zipball/master">
+            <img src="http://wwwedu.ge.ch/co/colombieres/Sic/Thullen/05_06/704Aexer6/image%20courgette.jpg" border="0" width="150" /></a>
     </div>
 
     <h1><a href="http://github.com/21croissants/courgette">courgette</a>
-      <span class="small">by <a href="http://github.com/21croissants">21croissants</a></span></h1>
+        <span class="small">by <a href="http://github.com/21croissants">21croissants</a></span></h1>
 
     <div class="description">
-      Courgette is a Rails engine (plugin) for Rails 2.x applications which makes your features files viewable through
-your browser
+        Courgette is a Rails engine (plugin) for Rails 2.x applications which makes your features files viewable through
+        your browser
     </div>
 
-    <p>some text
+    <p><img src="http://img.skitch.com/20100922-gj3f5k9cf2qek67yjapcs8nrbr.png" /></p>
 
-== Documentation & other projects to take some inspiration
+    <p>
 
-* documentation site to show off, mongoid style ;-) http://github.com/mongoid/mongoid-site
-* fork guide : http://help.github.com/forking/
-* Use http://github.com/7digital/7features code?</p><h2>Dependencies</h2>
-<p>There are no dependencies to install to use the plugin.
+    </p><br />
+<h2>TODO</h2>
+<br />
+fix problem with ‘rake features’ task broken because bundle exec cant’t find envjs :-(<br />
+<br />
+compatible with various versions of rails : github.com/ianwhite/garlic<br />
+output features with ruby source for step definitions, so developpers can read a scenario and understand quickly<br />
+&nbsp;what it does without having to open multiple files<br />
+compatible with Rails 3, check out weblog.rubyonrails.org/2010/2/9/plugin-authors-toward-a-better-future &amp; \<br />
+&nbsp;http://adventuresincoding.com/2010/08/34-ruby-on-rails-3-resources-to-get-you-started/
+http://www.themodestrubyist.com/2010/03/01/rails-3-plugins---part-1---the-big-picture<br />
+&nbsp;search feature, using http://rubygems.org/gems/grepper ?<br />
+output step definitions source (*_steps.rb) using github.com/moro/tsuridana &amp; syntax gem =&gt; Is there value?<br />
+or stepdefs cuke formatter (Prints All step definitions with their
+locations. Same as the usage formatter, except that steps are not
+printed.)<br />
+<br />
+syntax highligting for i18n features<br />
+Documentation &amp; other projects to take some inspiration<br />
+<br />
+documentation site to show off, mongoid style ;-) github.com/mongoid/mongoid-site<br />
+fork guide : help.github.com/forking/<br />
+Use github.com/7digital/7features code?<br />
+or a syntax higlighter among www.webresourcesdepot.com/11-syntax-highlighters-to-beautify-code-presentation/<br />
+ultraviolet.rubyforge.org/index.xhtml seems to be the best?<br />
+<br />
+Merge features from github.com/cs3b/cucumber_fe<br />
 
-If courgette assets are missing - it should not happen as install script takes care of it.
-However, if something went wrong, you could do a manual setup by creating a symlink to courgette/public/courgette inside your application's public directory :
 
-$ cd public
-$ ln -s ../vendor/plugins/courgette/public/courgette courgette
+    <h2>Dependencies</h2>
 
-To contribute:
-* fork the project
-* bundle install</p>
-<h2>Install</h2>
-<p>script/plugin install git@github.com:21croissants/courgette.git
+    <p>There are no dependencies to install in order to use the plugin. <br />
+</p>
+<p>If courgette assets are missing - it should not happen as install script takes care of it.
+        However, if something went wrong, you could do a manual setup by creating a symlink to
+        courgette/public/courgette inside your application's public directory :
 
-And browse to:
+        $ cd public
+        $ ln -s ../vendor/plugins/courgette/public/courgette courgette
+
+        To contribute:
+        * fork the project
+        * bundle install</p>
+
+
+    <h2>Install</h2>
+
+    <p>
+    </p><pre>script/plugin install git@github.com:21croissants/courgette.git</pre>
+
+    And browse to:<br /><br />
 
     /features
 
-Voilà, pretty list of features available in all env except "production". Great for communicating with the customer.</p>
-<h2>License</h2>
-<p>(The MIT License)
-
-Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-</p>
-<h2>Authors</h2>
-<p>I forked Jonas Nicklas original courgette and migrated the cucumber features to capybara (another awesome project of Jonas).
-<br/>
-<br/>21croissants (jean-michel@21croissants.com)
-<br/>Jonas Nicklas (jonas.nicklas@gmail.com)
-<br/>
-<br/>      </p>
-<h2>Contact</h2>
-<p>Jean-Michel Garnier (jean-michel@21croissants.com)
-<br/>      </p>
-
+    Voilà, pretty list of features available in all env except "production". Great for communicating with the
+    customer.
 
     <h2>Contribute</h2>
 
-    <p>You can  clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>git clone git://github.com/21croissants/courgette</pre>
+    <p>You can clone the project with <a href="http://git-scm.com">Git</a>
+        by running:
+    </p><pre>git clone git://github.com/21croissants/courgette</pre><br />
+<h2>Authors</h2>
+
+    <p>I forked Jonas Nicklas original courgette and migrated the cucumber features to capybara (another awesome project
+        of Jonas).
+        <br />
+        <br />21croissants (jean-michel@21croissants.com)
+        <br />Jonas Nicklas (jonas.nicklas@gmail.com)
+        <br />
+        <br /></p>
+
+    <h2>Contact</h2>
+
+    <p>Jean-Michel Garnier (jean-michel@21croissants.com)</p>
+<h2>License</h2>
+
+
+    
+<p>(The MIT License)
+
+        Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier
+
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        'Software'), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </p>
 
+
     <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/21croissants/courgette">21croissants/courgette</a>
+        get the source code on GitHub : <a href="http://github.com/21croissants/courgette">21croissants/courgette</a>
     </div>
 
-  </div>
 
-  
-</body>
-</html>
+</div>
+
+
+
+</body></html>
