@@ -21,7 +21,7 @@ module Courgette
     end
 
     def feature_filenames(path = '')
-      basenames_for_feature_files_in(path)
+      basenames_for_feature_files_in(path).map{ |path| path.sub('.feature', '')}
     end
 
     def find(param)
@@ -44,7 +44,7 @@ module Courgette
 
       def basenames_for(path, pattern)
         folder_relative_path = File.join(feature_root, path)
-        Pathname.glob("#{folder_relative_path}#{pattern}").map{ |f| f.basename(File.extname(f)).to_s }
+        Pathname.glob("#{folder_relative_path}#{pattern}").map{ |f| f.basename.to_s }
       end
   end
 end
