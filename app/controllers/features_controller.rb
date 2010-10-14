@@ -19,6 +19,11 @@ class FeaturesController < ApplicationController
   def source
     @feature = Courgette.find(params[:path])
     render "source", :layout => false
+    end
+
+  def view
+    @feature = Courgette.find(params[:path])
+    render "source"
   end
 
 end

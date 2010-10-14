@@ -35,7 +35,7 @@
   <script type="text/javascript">
       $(document).ready(function() {
           $('#fileTree').fileTree({ root: '', script: '/features/treeview' }, function(feature_basename) {
-              ajaxRequestUrl = "features/source?path=" + feature_basename;
+              ajaxRequestUrl = "/features/source?path=" + feature_basename;
               $.ajax({
                   url: ajaxRequestUrl,
                   type: "get",
