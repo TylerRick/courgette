@@ -8,5 +8,4 @@ Feature: Why courgette?
     Given I enter the address of the features page, e.g. http://staging.myfantasticapp.com/features
     Then I should see the source code of the first feature of my application
 
-  Scenario: Syntax higlighting
-    # Given
+  Scenario: Not available in production env (I don't know how to test this)
