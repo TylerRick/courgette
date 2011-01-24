@@ -92,3 +92,4 @@ UL.jqueryFileTree A:hover {
 .jqueryFileTree LI.ext_xls { background: url(/courgette/images/xls.png) left top no-repeat; }
 .jqueryFileTree LI.ext_xml { background: url(/courgette/images/code.png) left top no-repeat; }
 .jqueryFileTree LI.ext_zip { background: url(/courgette/images/zip.png) left top no-repeat; }
+.jqueryFileTree LI.ext_feature { background: url(/courgette/images/feature.png) left top no-repeat; }
