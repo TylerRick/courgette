@@ -26,4 +26,9 @@ class FeaturesController < ApplicationController
     render "source"
   end
 
+  def screenshots
+    @feature = Courgette.find(params[:path])
+    render :layout => false
+  end
+
 end

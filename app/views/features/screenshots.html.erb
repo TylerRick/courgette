@@ -1,0 +1,76 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+	<head profile="http://gmpg.org/xfn/11">
+
+	<title>Supersized - Full Screen Background/Slideshow jQuery Plugin</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <%= stylesheet_link_tag '/courgette/stylesheets/supersized' %>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <%= javascript_include_tag '/courgette/javascripts/effects.core.js', '/courgette/javascripts/effects.slide.js', '/courgette/javascripts/supersized.3.0.js' %>
+
+    <script type="text/javascript">
+		$(function(){
+			$.fn.supersized.options = {
+				startwidth: 1280,
+				startheight: 960,
+				vertical_center: 0,
+				slideshow: 1,
+				navigation: 1,
+				thumbnail_navigation: 1,
+				transition: 0, //0-None, 1-Fade, 2-slide top, 3-slide right, 4-slide bottom, 5-slide left
+				pause_hover: 0,
+				slide_counter: 1,
+				slide_captions: 1,
+                slide_interval: 20000,
+				slides : [
+                    <% @feature.scenarios.each do |scenario| -%>
+					{image : '/courgette/screenshots/<%= scenario -%>.png', title : '<%= scenario -%>', url : '<%= feature_view_path(:path => @feature.to_param) -%>'},
+                    <% end -%>
+					{image : 'slides/fence.jpg', title : 'Canal Park Fence', url : 'http://www.flickr.com/photos/wumbus/4582735030/sizes/l/in/set-72157623876357531/'}
+				]
+			};
+	        $('#supersized').supersized();
+	    });
+	</script>
+
+</head>
+
+<body>
+
+<!--Loading display while images load-->
+<div id="loading">&nbsp;</div>
+
+<!--Slides-->
+<div id="supersized"></div>
+
+<div id="prevthumb"></div>
+<div id="nextthumb"></div>
+
+
+<!--Control Bar-->
+<div id="controls-wrapper">
+	<div id="controls">
+
+		<!--Slide counter-->
+		<div id="slidecounter">
+			<span class="slidenumber"></span>/<span class="totalslides"></span>
+		</div>
+
+		<!--Slide captions displayed here-->
+		<div id="slidecaption"></div>
+
+		<!--Navigation-->
+		<div id="navigation">
+			<img id="prevslide" src="/courgette/images/back_dull.png"/><img id="pauseplay" src="/courgette/images/pause_dull.png"/><img id="nextslide" src="/courgette/images/forward_dull.png"/>
+		</div>
+
+	</div>
+</div>
+
+
+</body>
+</html>

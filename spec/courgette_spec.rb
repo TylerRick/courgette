@@ -44,7 +44,7 @@ describe Courgette do
 
   describe '.feature_filenames' do
     it "should return all the *.feature filenames of the features folder if no argument is specified" do
-      Courgette.feature_filenames.should == ['user_eats_rabbits']
+      Courgette.feature_filenames.should == ["screenshots", 'user_eats_rabbits']
     end
 
     it "should return all filenames for a relative path" do

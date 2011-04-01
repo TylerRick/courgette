@@ -24,6 +24,10 @@ module Courgette
       to_param == other.to_param
     end
 
+    def scenarios
+      ['Demo screenshot']
+    end
+
   private
 
     def relative_path
