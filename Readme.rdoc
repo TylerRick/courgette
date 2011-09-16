@@ -1,0 +1,67 @@
+Courgette
+=========
+
+Courgette is a Rails 3 engine which makes your cucumber features files viewable through your browser.
+
+!["Screenshot"](https://github.com/TylerRick/courgette/raw/master/doc/screenshot.png)
+
+Installing / Getting started
+----------------------------
+
+Courgette is only compatible with Rails 3.
+
+Add to your `Gemfile`:
+
+    gem 'courgette'
+
+And run:
+
+    bundle install
+
+Now start your app and go to [/features](http://localhost:3000/features). From there you can navigate to the specific feature file you want to look at.
+
+Contribute
+----------
+
+You can contribute to the project with Git:
+
+* Fork the project
+* bundle install
+* rake # should have no failures
+* Make your feature addition or bug fix (please specify ruby & rails versions)
+* Add tests for it. This is important so I don't break it in a future version unintentionally.
+* Commit and push
+* Send me a pull request
+
+Please vote for the next features: http://github.com/21croissants/courgette/issues#sort=votes
+
+Similar projects
+----------------
+
+* versapay/viewcumber — Cucumber formatter for easily viewing each step of your scenarios with screenshots (Rails 3 only)
+* github.com/cs3b/cucumber_fm — Very active, very nice dashboard with integrated editor
+* github.com/7digital/7features — a simple CSS formatter to ouput features in a more business readable way 
+* http://github.com/christophermoura/rcumber — not updated since nov 2008
+* https://www.relishapp.com/relish/relish/ — Formatter is closed source. Client for pushing projects to www.relishapp.com is open source.
+
+License
+-------
+
+(The MIT License)
+
+Copyright (c) 2009 Jonas Nicklas - 2010 Jean-Michel Garnier
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+To do
+-----
+
+* update screenshot in documentation
+* explain the new link to send by email
+* export courgette features to html ?  => run courgette on courgette on heroku : create rails app dummy and copy courgette features
+* http://nepalonrails.com/blog/2010/09/Creating-a-Rails-engine-with-tests-and-a-dummy-rails-application-embedded-in-it/
+
+
