@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'rake'
 
 require 'spec/rake/spectask'
@@ -6,6 +5,8 @@ require 'spec'
 
 require 'cucumber'
 require 'cucumber/rake/task'
+
+require 'bundler/gem_tasks'
 
 Spec::Rake::SpecTask.new('spec') do |t|
   t.spec_files = FileList['spec/**/*.rb']

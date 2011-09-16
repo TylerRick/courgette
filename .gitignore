@@ -1,3 +1,7 @@
 capybara*
 .rvmrc
 test.sqlite3
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
