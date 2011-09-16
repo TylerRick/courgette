@@ -4,7 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require "courgette/version"
 
 module Courgette
-
+  autoload :Engine, 'courgette/engine'
   autoload :Feature, 'courgette/feature'
 
   class << self
@@ -50,3 +50,4 @@ module Courgette
       end
   end
 end
+Courgette::Engine

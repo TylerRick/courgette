@@ -1,10 +1,8 @@
 unless Rails.env.production?
-
-  ActionController::Routing::Routes.draw do |map|
-    map.resources :features, :only => 'index'
-    map.feature_view "/features/view", :controller => 'features', :action => 'view'
-    map.feature_source "/features/source", :controller => 'features', :action => 'source'
-    map.treeview "/features/treeview", :controller => 'features', :action => 'treeview'
+  Rails.application.routes.draw do
+    resources :features, :only => :index
+    match "/features/view"     => 'features#view',     :as => :feature_view
+    match "/features/source"   => 'features#source',   :as => :feature_source
+    match "/features/treeview" => 'features#treeview', :as => :treeview
   end
-
 end
