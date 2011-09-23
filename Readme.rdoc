@@ -20,6 +20,22 @@ And run:
 
 Now start your app and go to [/features](http://localhost:3000/features). From there you can navigate to the specific feature file you want to look at.
 
+Preventing unauthorized access
+------------------------------
+
+To prevent unauthorized users from viewing your feature files, it is recommended that you add a before_filter to the FeaturesController, such as this:
+
+    FeaturesController.class_eval do
+      before_filter :authorize
+
+    private
+      def authorize
+        authorize! :view, Courgette::Feature
+      end
+    end
+
+This example uses the authorize! method from CanCan.
+
 Contribute
 ----------
 
