@@ -1,16 +1,16 @@
 require 'rake'
 
-require 'spec/rake/spectask'
-require 'spec'
-
-require 'cucumber'
-require 'cucumber/rake/task'
+#require 'spec/rake/spectask'
+#require 'spec'
+#
+#require 'cucumber'
+#require 'cucumber/rake/task'
 
 require 'bundler/gem_tasks'
 
-Spec::Rake::SpecTask.new('spec') do |t|
-  t.spec_files = FileList['spec/**/*.rb']
-end
+#Spec::Rake::SpecTask.new('spec') do |t|
+#  t.spec_files = FileList['spec/**/*.rb']
+#end
 
 task :features do
   sh %{ cucumber features/ }

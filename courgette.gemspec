@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email       = `git shortlog --summary --numbered --email | awk '{print $2, $3, $4}'`.split('\n')
 
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rspec-rails', '2.6.1'
   s.add_development_dependency 'cucumber', '0.9.0'
   s.add_development_dependency 'cucumber-rails'
   s.add_development_dependency 'database_cleaner'
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'launchy' # for save_and_open_page debugging
 
   # Fake Rails app in fixture_rails_root
-  s.add_development_dependency 'rails', '~> 3.0.0'
+  s.add_development_dependency 'rails', '~> 3.0.10'
   s.add_development_dependency 'sqlite3-ruby'
 
   s.files         = `git ls-files`.split('\n')
