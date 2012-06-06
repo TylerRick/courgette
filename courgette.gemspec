@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.summary     = %q{Courgette is a Rails engine which makes your cucumber features files viewable through your browser.}
   s.description = s.summary
 
-  s.authors     = ['Jonas Nicklas', 'Jean-Michel Garnier']
-  s.authors     = `git shortlog --summary --numbered         | awk '{print $2, $3    }'`.split('\n')
-  s.email       = `git shortlog --summary --numbered --email | awk '{print $2, $3, $4}'`.split('\n')
+  s.authors     = []
+  s.email       = []
+  `git log </dev/null | git shortlog --summary --numbered --email`.scan(/^\s*\d*\s*(.*)\s*<(\S*)>$/) { s.authors << $1; s.email << $2 }
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rspec-rails', '2.6.1'
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rails', '~> 3.0.10'
   s.add_development_dependency 'sqlite3-ruby'
 
-  s.files         = `git ls-files`.split($\)
+  s.files         = `git ls-files </dev/null`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
 
